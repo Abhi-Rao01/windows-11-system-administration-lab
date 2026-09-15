@@ -50,19 +50,19 @@ The project includes computer configuration, local user and group management, NT
 
 I first reviewed the current computer name before making any configuration changes.
 
-![Current Computer Name](images/01-computer-name-before.png)
+![Current Computer Name](Images/01-computer-name-befor.png)
 
 ## Step 2: Rename the Computer
 
 I renamed the Windows 11 client computer to use a clearer administrative naming format.
 
-![Rename Computer](images/02-rename-computer.png)
+![Rename Computer](Images/02-rename-computer.png)
 
 ## Step 3: Verify the New Computer Name
 
 After renaming, I confirmed that the updated computer name was applied successfully.
 
-![Computer Name Verified](images/03-computer-name-verified.png)
+![Computer Name Verified](Images/03-computer-name-verified.png)
 
 ---
 
@@ -72,71 +72,71 @@ After renaming, I confirmed that the updated computer name was applied successfu
 
 I opened the Local Users and Groups console to manage local accounts.
 
-![Open lusrmgr](images/04-local-user-console.png)
+![Open lusrmgr](Images/05-local-user-console.png)
 
 ## Step 5: Create the Helpdesk User
 
 I created a local standard support account named **helpdesk-user**.
 
-![Create Helpdesk User](images/04-creat-helpdesk-user.png)
+![Create Helpdesk User](Images/04-creat-helpdesk-user.png)
 
-![Helpdesk User Created](images/05-helpdesk-user-created.png)
+![Helpdesk User Created](Images/05-helpdesk-user-created.png)
 
 ## Step 6: Review Local User Console
 
 I reviewed the Users console to verify the new account.
 
-![Local User Console](images/05-local-user-console.png)
+![Local User Console](Images/05-local-user-console.png)
 
 ## Step 7: Create the IT Admin User
 
 I created another local account named **it-admin** for administrative tasks.
 
-![Create IT Admin User](images/06-create-it-admin.png)
+![Create IT Admin User](Images/06-create-it-admin.png)
 
 ## Step 8: Verify Created Users
 
 I confirmed that both local users were created successfully.
 
-![Local Users Created](images/07-local-users-created.png)
+![Local Users Created](Images/07-local-users-created.png)
 
 ## Step 9: Review Administrators Group
 
 I checked the local **Administrators** group before adding the new admin user.
 
-![Administrators Group Before](images/08-administrators-befor.png)
+![Administrators Group Before](Images/08-administrators-befor.png)
 
 ## Step 10: Add IT Admin to Administrators Group
 
 I added **it-admin** to the local Administrators group.
 
-![Add IT Admin](images/09-add-it-admin.png)
+![Add IT Admin](Images/09-add-it-admin.png)
 
-![IT Admin Added](images/10-it-admin-added.png)
+![IT Admin Added](Images/10-it-admin-added.png)
 
 ## Step 11: Verify Users with Command Prompt
 
 I used the `net users` command to list local accounts.
 
-![net users](images/11-net-users.png)
+![net users](Images/11-net-users.png)
 
 ## Step 12: Review Helpdesk User Details
 
 I checked the account configuration for the helpdesk user.
 
-![Helpdesk User Details](images/12-helpdesk-user-details.png)
+![Helpdesk User Details](Images/12-helpdesk-user-details.png)
 
 ## Step 13: Verify Accounts with PowerShell
 
 I used `Get-LocalUser` to verify local user information.
 
-![Get-LocalUser](images/13-get-localuser.png)
+![Get-LocalUser](Images/13-get-localuser.png)
 
 ## Step 14: Verify Administrator Membership in PowerShell
 
 I validated administrative group membership using PowerShell.
 
-![Admin Group PowerShell](images/14-admin-group-powershell.png)
+![Admin Group PowerShell](Images/14-admin-group-powershell.png)
 
 ---
 
@@ -146,69 +146,69 @@ I validated administrative group membership using PowerShell.
 
 I created a shared working folder to test NTFS access control.
 
-![Shared Data Folder](images/17-shared-data-folder.png)
+![Shared Data Folder](Images/17-shared-data-folder.png)
 
 ## Step 16: Review Original Permissions
 
 I reviewed the default permissions on the folder before making changes.
 
-![Original Permissions](images/18-original-permissions.png)
+![Original Permissions](Images/18-original-permissions.png)
 
 ## Step 17: Add Helpdesk User with Read-Only Access
 
 I assigned the helpdesk account limited read-only access.
 
-![Add Helpdesk Read Only](images/19-add-helpdesk-read-only.png)
+![Add Helpdesk Read Only](Images/19-add-helpdesk-read-only.png)
 
-![Helpdesk Read Only](images/20-helpdesk-read-only.png)
+![Helpdesk Read Only](Images/20-helpdesk-read-only.png)
 
 ## Step 18: Test Helpdesk Login
 
 I signed in as the helpdesk user to test access.
 
-![Helpdesk Login](images/21-helpdesk-login.png)
+![Helpdesk Login](Images/21-helpdesk-login.png)
 
 ## Step 19: Review NTFS Permissions Before Fix
 
 I reviewed the permissions again to troubleshoot or refine access.
 
-![NTFS Permissions Before Fix](images/21-ntfs-permissions-before-fix.png)
+![NTFS Permissions Before Fix](Images/21-ntfs-permissions-before-fix.png)
 
 ## Step 20: Configure Custom NTFS Permissions
 
 I adjusted permissions using custom NTFS settings.
 
-![NTFS Custom Permissions](images/22-ntfs-custom-permissions.png)
+![NTFS Custom Permissions](Images/22-ntfs-custom-permissions.png)
 
 ## Step 21: Validate Restricted Save Access
 
 I confirmed that the helpdesk user was restricted from saving where modify access was not allowed.
 
-![Helpdesk Save Restricted](images/23-helpdesk-save-restricted.png)
+![Helpdesk Save Restricted](Images/23-helpdesk-save-restricted.png)
 
 ## Step 22: Validate IT Admin Modify Access
 
 I verified that the IT admin account was able to modify files successfully.
 
-![IT Admin Modify Success](images/24-it-admin-modify-success.png)
+![IT Admin Modify Success](Images/24-it-admin-modify-success.png)
 
 ## Step 23: Re-test Helpdesk Access
 
 I performed an overwrite or write test again with the helpdesk user.
 
-![Helpdesk Overwrite Test](images/25-helpdesk-overwrite-test.png)
+![Helpdesk Overwrite Test](Images/25-helpdesk-overwrite-test.png)
 
 ## Step 24: Sign in as IT Admin
 
 I logged in again with the administrative account for final verification.
 
-![IT Admin Login](images/26-it-admin-login.png)
+![IT Admin Login](Images/26-it-admin-login.png)
 
 ## Step 25: Final NTFS Permission Verification
 
 I confirmed the final access configuration.
 
-![Final NTFS Permissions](images/27-final-ntfs-permissions.png)
+![Final NTFS Permissions](Images/27-final-ntfs-permissions.png)
 
 ---
 
@@ -218,19 +218,19 @@ I confirmed the final access configuration.
 
 I checked for updates and confirmed update completion.
 
-![Windows Update Check Complete](images/28-windows-upate-check-complete.png)
+![Windows Update Check Complete](Images/28-windows-upate-check-complete.png)
 
 ## Step 27: Review Quality Update History
 
 I reviewed recently installed quality updates.
 
-![Quality Update History](images/29-quality-update-history.png)
+![Quality Update History](Images/29-quality-update-history.png)
 
 ## Step 28: Review Driver Update History
 
 I reviewed installed driver updates.
 
-![Driver Update History](images/30-driver-update-history.png)
+![Driver Update History](Images/30-driver-update-history.png)
 
 ---
 
@@ -240,31 +240,31 @@ I reviewed installed driver updates.
 
 I opened Device Manager to inspect installed hardware.
 
-![Open Device Manager](images/31-open-device-manager.png)
+![Open Device Manager](Images/31-open-device-manager.png)
 
 ## Step 30: Review Device Manager Overview
 
 I verified that virtual hardware was detected correctly.
 
-![Device Manager Overview](images/32-device-manager-overview.png)
+![Device Manager Overview](Images/32-device-manager-overview.png)
 
 ## Step 31: Review Windows Security Dashboard
 
 I checked the overall Windows Security status.
 
-![Windows Security Dashboard](images/33-windows-security-dashbord.png)
+![Windows Security Dashboard](Images/33-windows-security-dashbord.png)
 
 ## Step 32: Run Defender Quick Scan
 
 I reviewed the results of a quick malware scan.
 
-![Defender Quick Scan Result](images/34-defender-quick-scan-result.png)
+![Defender Quick Scan Result](Images/34-defender-quick-scan-result.png)
 
 ## Step 33: Verify Defender Status in PowerShell
 
 I validated Windows Defender information using PowerShell.
 
-![Defender PowerShell Status](images/35-defender-powershell-status.png)
+![Defender PowerShell Status](Images/35-defender-powershell-status.png)
 
 ---
 
@@ -274,31 +274,31 @@ I validated Windows Defender information using PowerShell.
 
 I opened Windows Firewall settings and reviewed the active network protection profiles.
 
-![Firewall Network Profiles](images/36-firewall-network-profiles.png)
+![Firewall Network Profiles](Images/36-firewall-network-profiles.png)
 
 ## Step 35: Verify Firewall Profiles in PowerShell
 
 I used PowerShell to validate firewall profile status.
 
-![Firewall Profiles PowerShell](images/37-firewall-profiles-powershell.png)
+![Firewall Profiles PowerShell](Images/37-firewall-profiles-powershell.png)
 
 ## Step 36: Create a Firewall Rule
 
 I created a test or administrative firewall rule.
 
-![Create Firewall Rule](images/38-create-firewall-rule.png)
+![Create Firewall Rule](Images/38-create-firewall-rule.png)
 
 ## Step 37: Verify the Firewall Rule
 
 I checked that the rule was created successfully.
 
-![Firewall Rule Verification](images/39-firewall-rule-verification.png)
+![Firewall Rule Verification](Images/39-firewall-rule-verification.png)
 
 ## Step 38: Review Firewall Rule in GUI
 
 I confirmed the rule in the graphical firewall console.
 
-![Firewall Rule GUI](images/40-firewall-rule-gui.png)
+![Firewall Rule GUI](Images/40-firewall-rule-gui.png)
 
 ---
 
@@ -308,25 +308,25 @@ I confirmed the rule in the graphical firewall console.
 
 I opened the Windows Services management console.
 
-![Service Console](images/41-service-console.png)
+![Service Console](Images/41-service-console.png)
 
 ## Step 40: Review Windows Search Service Properties
 
 I examined the properties of the Windows Search service.
 
-![Windows Search Properties](images/42-windows-serch-properties.png)
+![Windows Search Properties](Images/42-windows-serch-properties.png)
 
 ## Step 41: Stop the Windows Search Service
 
 I stopped the service to validate service management behavior.
 
-![Windows Search Stopped](images/43-windows-serch-stopped.png)
+![Windows Search Stopped](Images/43-windows-serch-stopped.png)
 
 ## Step 42: Verify Service State in PowerShell
 
 I used PowerShell to confirm the service state.
 
-![Windows Search PowerShell](images/44-windows-search-powershell.png)
+![Windows Search PowerShell](Images/44-windows-search-powershell.png)
 
 ---
 
@@ -336,25 +336,25 @@ I used PowerShell to confirm the service state.
 
 I inspected running processes in Task Manager.
 
-![Task Manager Processes](images/45-task-manager-processes.png)
+![Task Manager Processes](Images/45-task-manager-processes.png)
 
 ## Step 44: Review CPU Usage
 
 I monitored CPU utilization.
 
-![Task Manager CPU](images/46-task-manager-cpu.png)
+![Task Manager CPU](Images/46-task-manager-cpu.png)
 
 ## Step 45: Review Memory Usage
 
 I monitored memory usage.
 
-![Task Manager Memory](images/47-task-manager-memory.png)
+![Task Manager Memory](Images/47-task-manager-memory.png)
 
 ## Step 46: Review Network Usage
 
 I monitored network usage in Task Manager.
 
-![Task Manager Network](images/48-task-manager-network.png)
+![Task Manager Network](Images/48-task-manager-network.png)
 
 ---
 
@@ -364,43 +364,43 @@ I monitored network usage in Task Manager.
 
 I opened Event Viewer to inspect Windows logs.
 
-![Event Viewer Overview](images/50-event-viewer-overview.png)
+![Event Viewer Overview](Images/50-event-viewer-overview.png)
 
 ## Step 48: Review System Event Logs
 
 I reviewed system log entries.
 
-![System Event Logs](images/51-system-event-logs.png)
+![System Event Logs](Images/51-system-event-logs.png)
 
 ## Step 49: Review Event Details
 
 I opened an event entry to inspect detailed information.
 
-![System Event Details](images/52-system-event-details.png)
+![System Event Details](Images/52-system-event-details.png)
 
 ## Step 50: Review Errors and Warnings
 
 I reviewed warning and error entries for troubleshooting practice.
 
-![System Errors and Warnings](images/53-system-errors-warnings.png)
+![System Errors and Warnings](Images/53-system-errors-warnings.png)
 
 ## Step 51: Create a Test Event
 
 I generated a custom or test event.
 
-![Create Test Event](images/54-create-test-event.png)
+![Create Test Event](Images/54-create-test-event.png)
 
 ## Step 52: Verify the Custom Event
 
 I checked that the test event appeared correctly.
 
-![Custom Event Verification](images/55-custom-event-verification.png)
+![Custom Event Verification](Images/55-custom-event-verification.png)
 
 ## Step 53: Verify Event Log in PowerShell
 
 I used PowerShell to confirm event log data.
 
-![Custom Event PowerShell](images/56-custom-event-powershell.png)
+![Custom Event PowerShell](Images/56-custom-event-powershell.png)
 
 ---
 
@@ -410,43 +410,43 @@ I used PowerShell to confirm event log data.
 
 I added a second disk to the virtual machine through VMware settings.
 
-![VMware Second Disk Added](images/57-vmware-second-disk-added.png)
+![VMware Second Disk Added](Images/57-vmware-second-disk-added.png)
 
 ## Step 55: Detect New Disk
 
 I verified that the new disk appeared as uninitialized.
 
-![New Disk Not Initialized](images/58-new-disk-not-initialized.png)
+![New Disk Not Initialized](Images/58-new-disk-not-initialized.png)
 
 ## Step 56: Initialize Disk as GPT
 
 I initialized the disk using GPT partition style.
 
-![Disk Initialized GPT](images/59-disk-initialized-gpt.png)
+![Disk Initialized GPT](Images/59-disk-initialized-gpt.png)
 
 ## Step 57: Complete Disk Configuration
 
 I created and configured the new volume in Disk Management.
 
-![Disk Management Final](images/60-disk-management-final.png)
+![Disk Management Final](Images/60-disk-management-final.png)
 
 ## Step 58: Verify New Drive in File Explorer
 
 I confirmed that the new drive was available in File Explorer.
 
-![New Drive File Explorer](images/61-new-drive-file-explorer.png)
+![New Drive File Explorer](Images/61-new-drive-file-explorer.png)
 
 ## Step 59: Verify Disks with PowerShell
 
 I used `Get-Disk` to validate the disk configuration.
 
-![Get-Disk PowerShell](images/62-get-disk-powershell.png)
+![Get-Disk PowerShell](Images/62-get-disk-powershell.png)
 
 ## Step 60: Verify Volumes with PowerShell
 
 I used `Get-Volume` to verify the volume configuration.
 
-![Get-Volume PowerShell](images/63-get-volume-powershell.png)
+![Get-Volume PowerShell](Images/63-get-volume-powershell.png)
 
 ---
 
@@ -462,7 +462,7 @@ ipconfig /all
 
 to review the full network configuration.
 
-![ipconfig all](images/64-ipconfig-all.png)
+![ipconfig all](Images/64-ipconfig-all.png)
 
 This helped verify:
 
