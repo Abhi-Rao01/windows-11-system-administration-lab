@@ -50,7 +50,7 @@ The project includes computer configuration, local user and group management, NT
 
 I first reviewed the current computer name before making any configuration changes.
 
-![Current Computer Name](images/01-computer-name-befor.png)
+![Current Computer Name](images/01-computer-name-before.png)
 
 ## Step 2: Rename the Computer
 
@@ -72,7 +72,7 @@ After renaming, I confirmed that the updated computer name was applied successfu
 
 I opened the Local Users and Groups console to manage local accounts.
 
-![Open lusrmgr](images/04-open-lusrmgr.png)
+![Open lusrmgr](images/04-local-user-console.png)
 
 ## Step 5: Create the Helpdesk User
 
